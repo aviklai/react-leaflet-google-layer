@@ -73,7 +73,6 @@ interface IGoogleMutantOptions extends TileLayerOptions {
 }
 
 interface IProps extends IGoogleMutantOptions, ContextProps {
-  opacity?: number;
   zIndex?: number;
 }
 
