@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-google-layer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React leaflet wrapper of leaflet.gridlayer.googlemutant",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
