@@ -11,7 +11,7 @@ interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
 }
 
 class ReactLeafletGoogleLayer extends GridLayer<IProps> {
-  static defaultProps: IProps = {
+  public static defaultProps: IProps = {
     useGoogMapsLoader: true,
     googleMapsLoaderConf: {VERSION: undefined}
   };
