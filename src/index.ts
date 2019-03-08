@@ -1,11 +1,9 @@
 import * as React from 'react';
 import * as L from 'leaflet';
 import { ContextProps, GridLayer, withLeaflet } from 'react-leaflet';
-import { gridLayer } from 'leaflet';
 import 'leaflet.gridlayer.googlemutant';
 
-interface IProps extends gridLayer.GoogleMutantOptions, ContextProps {
-  opacity?: number;
+interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   zIndex?: number;
 }
 
