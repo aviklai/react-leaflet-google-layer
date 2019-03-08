@@ -1,4 +1,3 @@
-/// <reference types="leaflet" />
 /// <reference types="leaflet.gridlayer.googlemutant" />
 import * as React from 'react';
 import * as L from 'leaflet';
