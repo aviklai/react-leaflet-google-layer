@@ -4,17 +4,24 @@ import { ContextProps, GridLayer, withLeaflet } from 'react-leaflet';
 import 'leaflet.gridlayer.googlemutant';
 import * as GoogleMapsLoader from 'google-maps';
 
-type GoogleMapsLoaderTypes = typeof GoogleMapsLoader;
 interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   zIndex?: number;
-  googleMapsLoaderConf: GoogleMapsLoaderTypes
+  useGoogMapsLoader: boolean,
+  googleMapsLoaderConf: Partial<typeof GoogleMapsLoader>;
 }
 
 class ReactLeafletGoogleLayer extends GridLayer<IProps> {
+  public static defaultProps: IProps = {
+    useGoogMapsLoader: true,
+    googleMapsLoaderConf: {VERSION: undefined}
+  };
+  
   public createLeafletElement(props: IProps) {
-    let googleMapsLoader = GoogleMapsLoader;
-    googleMapsLoader = Object.assign(googleMapsLoader, props.googleMapsLoaderConf);
-    GoogleMapsLoader.load();
+    if (props.useGoogMapsLoader) {
+      let googleMapsLoader = GoogleMapsLoader;
+      googleMapsLoader = Object.assign(googleMapsLoader, props.googleMapsLoaderConf);
+      GoogleMapsLoader.load();
+    }    
     this.leafletElement = L.gridLayer.googleMutant(props);
     return this.leafletElement;
   }
