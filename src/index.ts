@@ -6,22 +6,22 @@ import * as GoogleMapsLoader from 'google-maps';
 
 interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   zIndex?: number;
-  useGoogMapsLoader: boolean,
+  useGoogMapsLoader: boolean;
   googleMapsLoaderConf: Partial<typeof GoogleMapsLoader>;
 }
 
 class ReactLeafletGoogleLayer extends GridLayer<IProps> {
   public static defaultProps: IProps = {
     useGoogMapsLoader: true,
-    googleMapsLoaderConf: {VERSION: undefined}
+    googleMapsLoaderConf: { VERSION: undefined },
   };
-  
+
   public createLeafletElement(props: IProps) {
     if (props.useGoogMapsLoader) {
       let googleMapsLoader = GoogleMapsLoader;
       googleMapsLoader = Object.assign(googleMapsLoader, props.googleMapsLoaderConf);
       GoogleMapsLoader.load();
-    }    
+    }
     this.leafletElement = L.gridLayer.googleMutant(props);
     return this.leafletElement;
   }
