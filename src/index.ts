@@ -1,8 +1,9 @@
+/// <reference types="leaflet" />
+/// <reference types="leaflet.gridlayer.googlemutant" />
 import * as React from 'react';
 import * as L from 'leaflet';
 import { ContextProps, GridLayer, withLeaflet } from 'react-leaflet';
 import 'leaflet.gridlayer.googlemutant';
-import { TileLayerOptions, Point } from 'leaflet';
 
 interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   zIndex?: number;
