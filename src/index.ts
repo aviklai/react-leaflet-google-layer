@@ -6,7 +6,7 @@ import * as GoogleMapsLoader from 'google-maps';
 
 interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   zIndex?: number;
-  useGoogMapsLoader: boolean;
+  useGoogMapsLoader?: boolean;
   googleMapsLoaderConf: Partial<typeof GoogleMapsLoader>;
 }
 
