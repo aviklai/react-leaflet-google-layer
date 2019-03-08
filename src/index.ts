@@ -7,7 +7,7 @@ import * as GoogleMapsLoader from 'google-maps';
 interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   zIndex?: number;
   useGoogMapsLoader?: boolean;
-  googleMapsLoaderConf: Partial<typeof GoogleMapsLoader>;
+  googleMapsLoaderConf?: Partial<typeof GoogleMapsLoader>;
 }
 
 class ReactLeafletGoogleLayer extends GridLayer<IProps> {
