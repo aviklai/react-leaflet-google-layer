@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aviklai/react-leaflet-google-layer.svg?branch=master)](https://travis-ci.org/aviklai/react-leaflet-google-layer)
+
 Google layer for React-Leaflet using leaflet.gridlayer.googlemutant, implemented with typescript.
 
 Installation instructions:
