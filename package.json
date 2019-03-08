@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aviklai/react-leaflet-google-mutant.git"
+    "url": "git+https://github.com/aviklai/react-leaflet-google-layer.git"
   },
   "keywords": [
     "React",
@@ -32,9 +32,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aviklai/react-leaflet-google-mutant/issues"
+    "url": "https://github.com/aviklai/react-leaflet-google-layer/issues"
   },
-  "homepage": "https://github.com/aviklai/react-leaflet-google-mutant#readme",
+  "homepage": "https://github.com/aviklai/react-leaflet-google-layer#readme",
   "peerDependencies": {
     "leaflet": "^1.3.0",
     "react": "^16.0.0",
