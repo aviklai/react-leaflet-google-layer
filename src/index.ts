@@ -1,4 +1,3 @@
-/// <reference types="leaflet.gridlayer.googlemutant" />
 import * as React from 'react';
 import * as L from 'leaflet';
 import { ContextProps, GridLayer, withLeaflet } from 'react-leaflet';
