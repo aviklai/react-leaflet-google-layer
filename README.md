@@ -1,4 +1,4 @@
-Google layer for React-Leaflet using leaflet.gridlayer.googlemutant
+Google layer for React-Leaflet using leaflet.gridlayer.googlemutant, implemented with typescript.
 
 Installation instructions:
 1. Add google maps js api in your index.html: `<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>`
