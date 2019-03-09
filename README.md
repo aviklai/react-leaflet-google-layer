@@ -25,3 +25,31 @@ export class App extends React.Component {
 }
 ```
 
+## Options
+useGoogMapsLoader?: boolean <br/>
+zIndex?: number <br/>
+
+#### From google-maps (https://github.com/Carrooi/Js-GoogleMapsLoader) - googleMapsLoaderConf prop:
+* KEY?: string
+* URL?: string
+* LIBRARIES?: Array<string>
+* CLIENT?: string
+* CHANNEL?: string
+* LANGUAGE?: string
+* REGION?: string
+* VERSION?: string
+* WINDOW_CALLBACK_NAME?: string
+
+#### From googlemutant (https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant):
+* minZoom?: number
+* maxZoom?: number
+* maxNativeZoom?: number
+* tileSize?: number | Point
+* subdomains?: string | string[]
+* errorTileUrl?: string
+* attribution?: string
+* opacity?: number
+* continuousWorld?: boolean
+* noWrap?: boolean
+* type?: 'roadmap' | 'satellite' | 'terrain' | 'hybrid'
+
