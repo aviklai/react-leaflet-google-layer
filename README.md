@@ -29,7 +29,7 @@ export class App extends React.Component {
 useGoogMapsLoader?: boolean <br/>
 zIndex?: number <br/>
 
-## From google-maps (https://github.com/Carrooi/Js-GoogleMapsLoader) - googleMapsLoaderConf prop:
+#### From google-maps (https://github.com/Carrooi/Js-GoogleMapsLoader) - googleMapsLoaderConf prop:
 * KEY: string
 * URL?: string
 * LIBRARIES?: Array<string>
@@ -40,7 +40,7 @@ zIndex?: number <br/>
 * VERSION?: string
 * WINDOW_CALLBACK_NAME?: string
 
-## From googlemutant (https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant):
+#### From googlemutant (https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant):
 * minZoom?: number
 * maxZoom?: number
 * maxNativeZoom?: number
