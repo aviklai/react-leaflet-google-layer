@@ -30,7 +30,7 @@ useGoogMapsLoader?: boolean <br/>
 zIndex?: number <br/>
 
 #### From google-maps (https://github.com/Carrooi/Js-GoogleMapsLoader) - googleMapsLoaderConf prop:
-* KEY: string
+* KEY?: string
 * URL?: string
 * LIBRARIES?: Array<string>
 * CLIENT?: string
