@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/aviklai/react-leaflet-google-layer.svg?branch=master)](https://travis-ci.org/aviklai/react-leaflet-google-layer) [![Coverage Status](https://coveralls.io/repos/github/aviklai/react-leaflet-google-layer/badge.svg?branch=master)](https://coveralls.io/github/aviklai/react-leaflet-google-layer?branch=master)
+[![Build Status](https://travis-ci.org/aviklai/react-leaflet-google-layer.svg?branch=master)](https://travis-ci.org/aviklai/react-leaflet-google-layer) 
+[![Coverage Status](https://coveralls.io/repos/github/aviklai/react-leaflet-google-layer/badge.svg?branch=master)](https://coveralls.io/github/aviklai/react-leaflet-google-layer?branch=master) 
+[![npm version](https://img.shields.io/npm/v/react-leaflet-google-layer.svg)](https://www.npmjs.com/package/react-leaflet-google-layer)
 
 Google layer for React-Leaflet using leaflet.gridlayer.googlemutant, implemented with typescript.
 
@@ -37,7 +39,7 @@ zIndex?: number <br/>
 * CHANNEL?: string
 * LANGUAGE?: string
 * REGION?: string
-* VERSION?: string, default: `undefined`
+* VERSION?: string
 * WINDOW_CALLBACK_NAME?: string
 
 #### From googlemutant (https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant):
