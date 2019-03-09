@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ReactLeafletGoogleLayer from '../index';
 import { Map } from 'react-leaflet';
-import 'leaflet.gridlayer.googlemutant';
 import * as ReactTestUtils from 'react-dom/test-utils';
 
 test('ReactLeafletGoogleLayer', () => {
