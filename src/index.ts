@@ -17,12 +17,13 @@ class ReactLeafletGoogleLayer extends GridLayer<IProps> {
   };
 
   public createLeafletElement(props: IProps) {
-    if (props.useGoogMapsLoader) {
+    const { useGoogMapsLoader, googleMapsLoaderConf, leaflet, ...googleMutantProps } = props;
+    if (useGoogMapsLoader) {
       let googleMapsLoader = GoogleMapsLoader;
-      googleMapsLoader = Object.assign(googleMapsLoader, props.googleMapsLoaderConf);
+      googleMapsLoader = Object.assign(googleMapsLoader, googleMapsLoaderConf);
       googleMapsLoader.load();
     }
-    this.leafletElement = L.gridLayer.googleMutant(props);
+    this.leafletElement = L.gridLayer.googleMutant(googleMutantProps);
     return this.leafletElement;
   }
 
