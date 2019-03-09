@@ -20,7 +20,7 @@ class ReactLeafletGoogleLayer extends GridLayer<IProps> {
     if (props.useGoogMapsLoader) {
       let googleMapsLoader = GoogleMapsLoader;
       googleMapsLoader = Object.assign(googleMapsLoader, props.googleMapsLoaderConf);
-      GoogleMapsLoader.load();
+      googleMapsLoader.load();
     }
     this.leafletElement = L.gridLayer.googleMutant(props);
     return this.leafletElement;
