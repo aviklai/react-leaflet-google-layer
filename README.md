@@ -28,6 +28,9 @@ export class App extends React.Component {
 }
 ```
 
+## Basic usage example
+https://codesandbox.io/s/basicusage-qluec
+
 ## Options
 useGoogMapsLoader?: boolean, default: `true` <br/>
 zIndex?: number <br/>
