@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-google-layer",
-  "version": "1.1.5-beta",
+  "version": "1.1.5",
   "description": "React leaflet wrapper of leaflet.gridlayer.googlemutant",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -66,7 +66,7 @@
   "dependencies": {
     "@types/google-maps": "^3.2.0",
     "@types/leaflet": "^1.4.1",
-    "@types/leaflet.gridlayer.googlemutant": "^0.4.4",
+    "@types/leaflet.gridlayer.googlemutant": "^0.4.5",
     "google-maps": "^3.3.0",
     "leaflet.gridlayer.googlemutant": "^0.10.0"
   }
