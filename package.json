@@ -20,6 +20,9 @@
     "postversion": "git push && git push --tags",
     "cover": "jest --config jestconfig.json --coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aviklai/react-leaflet-google-layer.git"
