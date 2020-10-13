@@ -33,12 +33,13 @@ https://codesandbox.io/s/basicusage-qluec
 
 ## Options
 useGoogMapsLoader?: boolean, default: `true` <br/>
+googleMapsAddLayers?: { name: 'BicyclingLayer' | 'TrafficLayer' | 'TransitLayer', options?: any }[] <br/>
 zIndex?: number <br/>
 
 #### From google-maps (https://github.com/Carrooi/Js-GoogleMapsLoader) - googleMapsLoaderConf prop:
 * KEY?: string
 * URL?: string
-* LIBRARIES?: Array<string>
+* LIBRARIES?: string[]
 * CLIENT?: string
 * CHANNEL?: string
 * LANGUAGE?: string
