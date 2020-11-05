@@ -19,7 +19,7 @@ interface IProps extends L.gridLayer.GoogleMutantOptions {
 }
 
 const createLeafletElement = (props: IProps, context: LeafletContextInterface) => {
-  const { useGoogMapsLoader, googleMapsLoaderConf, googleMapsAddLayers, ...googleMutantProps } = props;
+  const { useGoogMapsLoader = true, googleMapsLoaderConf = { VERSION: undefined }, googleMapsAddLayers, ...googleMutantProps } = props;
   if (useGoogMapsLoader) {
     let googleMapsLoader = GoogleMapsLoader;
     googleMapsLoader = Object.assign(googleMapsLoader, googleMapsLoaderConf);
