@@ -1,16 +1,20 @@
 import * as React from 'react';
+import ReactDOM from 'react-dom';
 import ReactLeafletGoogleLayer from '../index';
-import { Map } from 'react-leaflet';
+import { MapContainer } from 'react-leaflet';
 import * as ReactTestUtils from 'react-dom/test-utils';
 
+
 test('ReactLeafletGoogleLayer', () => {
-  expect(ReactLeafletGoogleLayer);
+  expect(ReactLeafletGoogleLayer);   
 
-  const component = ReactTestUtils.renderIntoDocument(
-    <Map>
-      <ReactLeafletGoogleLayer />
-    </Map>
+  const dom = ReactTestUtils.renderIntoDocument(
+    <div>
+      <MapContainer>
+        <ReactLeafletGoogleLayer />
+      </MapContainer>
+    </div>
   ) as any;
-  expect(component.leafletElement._container).toBeDefined()  
-
+  const component = ReactDOM.findDOMNode(dom.childNodes[0]) as any;
+  expect(component).toBeInstanceOf(HTMLElement);
 });

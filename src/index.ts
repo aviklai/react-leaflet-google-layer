@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as L from 'leaflet';
-import { ContextProps, GridLayer, withLeaflet } from 'react-leaflet';
+import { createLayerComponent, updateGridLayer, LeafletContextInterface, LayerProps } from '@react-leaflet/core';
 import 'leaflet.gridlayer.googlemutant';
 import * as GoogleMapsLoader from 'google-maps';
 
@@ -10,7 +10,7 @@ interface IGoogleMapsAddLayer {
   options?: any;
 }
 
-interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
+interface IProps extends L.gridLayer.GoogleMutantOptions {
   zIndex?: number;
   useGoogMapsLoader?: boolean;
   googleMapsLoaderConf?: Partial<typeof GoogleMapsLoader>;
@@ -18,46 +18,21 @@ interface IProps extends L.gridLayer.GoogleMutantOptions, ContextProps {
   ref?: React.Ref<any>;
 }
 
-class ReactLeafletGoogleLayer extends GridLayer<IProps> {
-  public static defaultProps: IProps = {
-    useGoogMapsLoader: true,
-    googleMapsLoaderConf: { VERSION: undefined },
-    googleMapsAddLayers: undefined
-  };
-
-  public createLeafletElement(props: IProps) {
-    const { useGoogMapsLoader, googleMapsLoaderConf, googleMapsAddLayers, leaflet, ...googleMutantProps } = props;
-    if (useGoogMapsLoader) {
-      let googleMapsLoader = GoogleMapsLoader;
-      googleMapsLoader = Object.assign(googleMapsLoader, googleMapsLoaderConf);
-      googleMapsLoader.load();
-    }
-    this.leafletElement = L.gridLayer.googleMutant(googleMutantProps)
-    if (googleMapsAddLayers) {
-      googleMapsAddLayers.forEach((layer) => {
-        (this.leafletElement as L.gridLayer.GoogleMutant).addGoogleLayer(layer.name, layer.options);
-      });
-    }    
-    return this.leafletElement;
+const createLeafletElement = (props: IProps, context: LeafletContextInterface) => {
+  const { useGoogMapsLoader, googleMapsLoaderConf, googleMapsAddLayers, ...googleMutantProps } = props;
+  if (useGoogMapsLoader) {
+    let googleMapsLoader = GoogleMapsLoader;
+    googleMapsLoader = Object.assign(googleMapsLoader, googleMapsLoaderConf);
+    googleMapsLoader.load();
   }
-
-  public addGoogleLayer = (name: string, options?: any) => {
-    (this.leafletElement as L.gridLayer.GoogleMutant).addGoogleLayer(name, options);
-  }
-
-  public removeGoogleLayer = (name: string) => {
-    (this.leafletElement as L.gridLayer.GoogleMutant).removeGoogleLayer(name);
-  }
-
-  public updateLeafletElement(prevProps: IProps, nextProps: IProps) {
-    const { opacity, zIndex } = nextProps;
-    if (opacity !== undefined && opacity !== prevProps.opacity) {
-      this.leafletElement.setOpacity(opacity);
-    }
-    if (zIndex !== undefined && zIndex !== prevProps.zIndex) {
-      this.leafletElement.setZIndex(zIndex);
-    }
-  }
+  const instance = L.gridLayer.googleMutant(googleMutantProps)
+  if (googleMapsAddLayers) {
+    googleMapsAddLayers.forEach((layer) => {
+      (instance as L.gridLayer.GoogleMutant).addGoogleLayer(layer.name, layer.options);
+    });
+  }    
+  return { instance, context };
 }
 
-export default withLeaflet(ReactLeafletGoogleLayer);
+
+export default createLayerComponent<L.GridLayer, LayerProps & IProps>(createLeafletElement, updateGridLayer);
