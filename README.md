@@ -19,7 +19,7 @@ and set the prop useGoogMapsLoader to `false`.
 Usage example:
 ```
 import * as React from 'react';
-import { MapContainer } from "react-leaflet";
+import { MapContainer } from 'react-leaflet';
 import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
 
 export const App = () => { 
