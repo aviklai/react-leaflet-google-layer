@@ -4,8 +4,11 @@
 
 Google layer for React-Leaflet using leaflet.gridlayer.googlemutant, implemented with typescript.
 
-Installation instructions:
-1. run `npm install --save react-leaflet-google-layer`
+## Requirements
+This version of the library supports React Leaflet v2.
+
+## Installation instructions:
+1. run `npm install --save react-leaflet-google-layer@"^1.x.x"`
 2. By default this library uses the google-maps loader library to load the google maps api. If you want to use the script tag instead, you can Add google maps js api in your index.html: <br/> 
 `<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>` <br/>
 and set the prop useGoogMapsLoader to `false`.
