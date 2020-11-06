@@ -2,7 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/aviklai/react-leaflet-google-layer/badge.svg?branch=master)](https://coveralls.io/github/aviklai/react-leaflet-google-layer?branch=master) 
 [![npm version](https://img.shields.io/npm/v/react-leaflet-google-layer.svg)](https://www.npmjs.com/package/react-leaflet-google-layer)
 
-Google layer for React-Leaflet v3 using leaflet.gridlayer.googlemutant, implemented with typescript.
+Google layer for React Leaflet v3 using leaflet.gridlayer.googlemutant, implemented with typescript.
 
 ## Requirements
 The current version of this library supports React Leaflet v3. <br/>
