@@ -7,7 +7,7 @@ Google layer for React-Leaflet v3 using leaflet.gridlayer.googlemutant, implemen
 ## Requirements
 The current version of this library supports React Leaflet v3. <br/>
 If you are using React Leaflet v2, please use the previous version of this library. Please see the documentation here: <br/>
-https://github.com/aviklai/react-leaflet-google-layer/tree/v2
+https://github.com/aviklai/react-leaflet-google-layer/tree/v1
 
 ## Installation instructions:
 1. run `npm install --save react-leaflet-google-layer`
