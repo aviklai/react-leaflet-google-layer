@@ -41,7 +41,7 @@ useGoogMapsLoader?: boolean, default: `true` <br/>
 googleMapsAddLayers?: { name: 'BicyclingLayer' | 'TrafficLayer' | 'TransitLayer', options?: any }[] <br/>
 zIndex?: number <br/>
 
-#### From google-maps (https://github.com/Carrooi/Js-GoogleMapsLoader) - googleMapsLoaderConf prop:
+#### From js-api-loader (https://github.com/googlemaps/js-api-loader) - googleMapsLoaderConf prop:
 * version?: string
 * client?: string
 * channel?: string
