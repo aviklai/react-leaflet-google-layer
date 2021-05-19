@@ -33,5 +33,5 @@ describe('ReactLeafletGoogleLayer', () => {
     ) as any;
     const component = ReactDOM.findDOMNode(dom.childNodes[0]) as any;
     expect(component).toBeInstanceOf(HTMLElement);
-  })
+  });
 });
