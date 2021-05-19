@@ -20,5 +20,18 @@ describe('ReactLeafletGoogleLayer', () => {
     ) as any;
     const component = ReactDOM.findDOMNode(dom.childNodes[0]) as any;
     expect(component).toBeInstanceOf(HTMLElement);
+  });
+
+  it('Adding google layers', () => {
+    expect(ReactLeafletGoogleLayer);   
+    const dom = ReactTestUtils.renderIntoDocument(
+      <div>
+        <MapContainer>
+          <ReactLeafletGoogleLayer googleMapsAddLayers={[{name: 'TrafficLayer'}]} />
+        </MapContainer>
+      </div>
+    ) as any;
+    const component = ReactDOM.findDOMNode(dom.childNodes[0]) as any;
+    expect(component).toBeInstanceOf(HTMLElement);
   })
 });
