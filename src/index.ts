@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as L from 'leaflet';
 import { ContextProps, GridLayer, withLeaflet } from 'react-leaflet';
-import 'leaflet.gridlayer.googlemutant';
+import 'leaflet.gridlayer.googlemutant/dist/Leaflet.GoogleMutant';
 import * as GoogleMapsLoader from 'google-maps';
 
 

@@ -69,8 +69,8 @@
   "dependencies": {
     "@types/google-maps": "^3.2.0",
     "@types/leaflet": "^1.4.1",
-    "@types/leaflet.gridlayer.googlemutant": "^0.4.5",
+    "@types/leaflet.gridlayer.googlemutant": "^0.4.6",
     "google-maps": "^3.3.0",
-    "leaflet.gridlayer.googlemutant": "^0.10.0"
+    "leaflet.gridlayer.googlemutant": "^0.13.5"
   }
 }
