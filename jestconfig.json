@@ -7,5 +7,14 @@
     "moduleDirectories": [
         "node_modules",
         "main/node_modules"
-    ]
+    ],
+    "testEnvironment": "jsdom",
+    "transformIgnorePatterns": ["/node_modules/(?!(@react-leaflet/core|react-leaflet))"],
+    "globals": {
+        "ts-jest": {
+          "tsconfig": {
+            "allowJs": true
+          }
+        }
+      }
   }
