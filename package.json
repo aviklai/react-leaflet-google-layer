@@ -33,7 +33,8 @@
     "google",
     "googlemutant",
     "typescript",
-    "react-leaflet-v3"
+    "react-leaflet-v3",
+    "react-leaflet-v4"
   ],
   "author": "",
   "license": "MIT",
