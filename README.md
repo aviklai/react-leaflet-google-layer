@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aviklai/react-leaflet-google-layer.svg?branch=master)](https://travis-ci.org/aviklai/react-leaflet-google-layer) 
+[![Build Status](https://github.com/aviklai/react-leaflet-google-layer/actions/workflows/ci.yml/badge.svg)](https://github.com/aviklai/react-leaflet-google-layer/actions/workflows/ci.yml) 
 [![Coverage Status](https://coveralls.io/repos/github/aviklai/react-leaflet-google-layer/badge.svg?branch=master)](https://coveralls.io/github/aviklai/react-leaflet-google-layer?branch=master) 
 [![npm version](https://img.shields.io/npm/v/react-leaflet-google-layer.svg)](https://www.npmjs.com/package/react-leaflet-google-layer)
 
