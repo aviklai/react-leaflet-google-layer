@@ -34,4 +34,17 @@ describe('ReactLeafletGoogleLayer', () => {
     const component = ReactDOM.findDOMNode(dom.childNodes[0]) as any;
     expect(component).toBeInstanceOf(HTMLElement);
   });
+ 
+  it('With options', () => {
+    expect(ReactLeafletGoogleLayer);   
+    const dom = ReactTestUtils.renderIntoDocument(
+      <div>
+        <MapContainer>
+          <ReactLeafletGoogleLayer apiKey={"123"} minZoom={1} useGoogMapsLoader={false} googleMapsLoaderConf={{language: 'en', apiKey: "123"}} />
+        </MapContainer>
+      </div>
+    ) as any;
+    const component = ReactDOM.findDOMNode(dom.childNodes[0]) as any;
+    expect(component).toBeInstanceOf(HTMLElement);
+  });
 });
