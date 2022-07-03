@@ -18,7 +18,7 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "cover": "jest --config jestconfig.json --coverage && coveralls < coverage/lcov.info"
+    "cover": "jest --config jestconfig.json --coverage"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
