@@ -1,16 +1,24 @@
-name: react-leaflet-google-layer-ci
+name: ci process
 on: [push, pull_request]
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: checkout
+      uses: actions/checkout@v3
+    
+    - name: setup node
     - uses: actions/setup-node@v3
       with:
         node-version: 14
         cache: 'npm'
-    - run: npm install
-    - run: npm run cover
-    - uses: coverallsapp/github-action@master
+    
+    - name: install and test
+      run: | 
+        npm install
+        npm run cover
+   
+    - name: send to coveralls
+      uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
