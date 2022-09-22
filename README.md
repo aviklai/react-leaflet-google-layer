@@ -61,5 +61,5 @@ zIndex?: number <br/>
 * continuousWorld?: boolean
 * noWrap?: boolean
 * type?: 'roadmap' | 'satellite' | 'terrain' | 'hybrid'
-* styles?: GoogleMutantStyle[];
+* styles?: GoogleMutantStyle[]
 
