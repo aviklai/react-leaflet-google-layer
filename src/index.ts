@@ -13,7 +13,7 @@ interface IGoogleMapsAddLayer {
 interface IProps extends L.gridLayer.GoogleMutantOptions {
   zIndex?: number;
   useGoogMapsLoader?: boolean;
-  googleMapsLoaderConf?: LoaderOptions;
+  googleMapsLoaderConf?: Omit<LoaderOptions, 'apiKey'>;
   googleMapsAddLayers?: IGoogleMapsAddLayer[];
   apiKey?: string;
 }

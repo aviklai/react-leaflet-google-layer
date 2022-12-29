@@ -40,7 +40,7 @@ describe('ReactLeafletGoogleLayer', () => {
     const dom = ReactTestUtils.renderIntoDocument(
       <div>
         <MapContainer>
-          <ReactLeafletGoogleLayer apiKey={"123"} minZoom={1} useGoogMapsLoader={false} googleMapsLoaderConf={{language: 'en', apiKey: "123"}} />
+          <ReactLeafletGoogleLayer apiKey={"123"} minZoom={1} useGoogMapsLoader={false} googleMapsLoaderConf={{language: 'en'}} />
         </MapContainer>
       </div>
     ) as any;
