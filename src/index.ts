@@ -41,12 +41,13 @@ const updateLeafletElement = (
   props: IProps,
   prevProps: IProps
 ) => {
-  let prevGoogleMapsAddLayers = prevProps.googleMapsAddLayers
+  const prevGoogleMapsAddLayers = prevProps.googleMapsAddLayers
     ? prevProps.googleMapsAddLayers.map((addLayer: IGoogleMapsAddLayer) => addLayer.name)
     : [];
-  let currentGoogleMapsAddLayers = props.googleMapsAddLayers
+  const currentGoogleMapsAddLayers = props.googleMapsAddLayers
     ? props.googleMapsAddLayers.map((addLayer: IGoogleMapsAddLayer) => addLayer.name)
     : [];
+  
   if (props.googleMapsAddLayers) {
     props.googleMapsAddLayers.forEach((layer) => {
       if (prevGoogleMapsAddLayers.indexOf(layer.name) === -1) {
@@ -56,7 +57,9 @@ const updateLeafletElement = (
         );
       }
     });
-  if (prevProps.googleMapsAddLayers) 
+  }
+  
+  if (prevProps.googleMapsAddLayers) {
     prevProps.googleMapsAddLayers.forEach((layer) => {
       if (currentGoogleMapsAddLayers.indexOf(layer.name) === -1) {
         (instance as L.gridLayer.GoogleMutant).removeGoogleLayer(layer.name);
