@@ -16,6 +16,7 @@ interface IProps extends L.gridLayer.GoogleMutantOptions {
   googleMapsLoaderConf?: LoaderOptions;
   googleMapsAddLayers?: IGoogleMapsAddLayer[];
   apiKey?: string;
+  mapId?: string;
 }
 
 let googleMapsScriptLoaded = false;
