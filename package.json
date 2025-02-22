@@ -75,6 +75,6 @@
     "@googlemaps/js-api-loader": "^1.8.0",
     "@types/leaflet": "^1.5.0",
     "@types/leaflet.gridlayer.googlemutant": "^0.4.9",
-    "leaflet.gridlayer.googlemutant": "^0.14.1"
+    "leaflet.gridlayer.googlemutant": "^0.15.0"
   }
 }
